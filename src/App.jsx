@@ -1,10 +1,13 @@
-function App() {
+import Hello from "./components/Hello";
+import Fruits from "./components/Fruits";
+import Conditional from "./components/Conditional";
 
+function App() {
   return (
     <>
-       <h1>Hello World!</h1> 
+      <Conditional />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
