@@ -6,18 +6,22 @@ export default function Fruits() {
     {
       name: "apple",
       price: 10,
+      soldout: true,
     },
     {
       name: "banana",
       price: 210,
+      soldout: false,
     },
     {
       name: "berry",
       price: 130,
+      soldout: true,
     },
     {
       name: "mango",
       price: 110,
+      soldout: false,
     },
   ];
 
@@ -25,7 +29,12 @@ export default function Fruits() {
     <div>
       <ul>
         {fruits.map((fruit) => (
-          <Fruit key={fruit.name} name={fruit.name} price={fruit.price} />
+          <Fruit
+            key={fruit.name}
+            name={fruit.name}
+            price={fruit.price}
+            soldout={fruit.soldout}
+          />
         ))}
       </ul>
     </div>

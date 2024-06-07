@@ -1,11 +1,9 @@
-import Hello from "./components/Hello";
-import Fruits from "./components/Fruits";
-import Conditional from "./components/Conditional";
+import Form from "./components/Form";
 
 function App() {
   return (
     <>
-      <Conditional />
+      <Form />
     </>
   );
 }
