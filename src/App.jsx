@@ -1,9 +1,12 @@
-import Form from "./components/Form";
+import Todo from "./components/ToDo";
+import Header from "./components/Header";
+import "./App.css";
 
 function App() {
   return (
     <>
-      <Form />
+      <Header />
+      <Todo />
     </>
   );
 }
