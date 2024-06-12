@@ -1,12 +1,19 @@
 import { useState } from "react";
 import styles from "./forms.module.css";
 export default function Forms({ todos, setTodos }) {
-  const [todo, setTodo] = useState("");
+  // const [todo, setTodo] = useState("");
+  const [todo, setTodo] = useState({
+    name: "",
+    done: false,
+  });
 
   function handleSubmit(e) {
     e.preventDefault();
     setTodos([...todos, todo]);
-    setTodo("");
+    setTodo({
+      name: "",
+      done: false,
+    });
     // console.log(todos);
   }
   return (
@@ -16,8 +23,8 @@ export default function Forms({ todos, setTodos }) {
           <input
             placeholder="Enter To-Do Item"
             className={styles.modernInput}
-            onChange={(e) => setTodo(e.target.value)}
-            value={todo}
+            onChange={(e) => setTodo({ name: e.target.value, done: false })}
+            value={todo.name}
             type="text"
           />
           <button className={styles.modernButton} type="submit">
